@@ -61,23 +61,25 @@ def run(n_ingredients):
 		initial_history = Root(game, [((0,0,0,0,0,0,0),0), ((0,0,0,0,0,0,0),1)], 0)
 	#make sure to change exploration accordingly - also what should the epsilon value be?
 	epsilon = math.pow(0.95, 2)
-	solver = POMCP_Solver(0.95, epsilon, 500000, initial_history, game, 10, 5)
+	solver = POMCP_Solver(0.95, epsilon, 502000, initial_history, game, 10, 5)
 	solver.search()
 	return solver.data
 
 big_l = []
 for _ in range(1, 21):
-	print(_)
 #KEEP THESE PARAMETERS FOR NOW!!
 	# l = []
 	# for i in range(1,21):
 	# 	data = run(_)
 	# 	l.append(data[0])
 	# print(l)
-	data = run(6)
+	data = run(5)
 	l = []
-	for i in range(1,21):
-		l.append(data[round((math.e/1.4111)**(i)) - 1])
+	i = 3
+	while i < 5.85:
+		#print(round(10**i))
+		l.append(data[round(10**i) - 1000])
+		i = i + 0.15
 	print(l)
 	big_l.append(l)
 	print("_____________________")
