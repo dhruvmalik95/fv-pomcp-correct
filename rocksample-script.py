@@ -43,7 +43,7 @@ for _ in range(0, 20):
 	big_l.append(l)	
 
 f = open('data-pomcp.txt', 'w')
-f.write(str(data))
+f.write(str(big_l))
 print("_____________________")
 
 """
