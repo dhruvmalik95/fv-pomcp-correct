@@ -38,7 +38,7 @@ for _ in range(0, 20):
 	l = []
 	i = 3
 	while i <= 5.775:
-		l.append(data[round(10^i) - 1000])
+		l.append(data[round(10**i) - 1000])
 		i = i + 0.13875
 	big_l.append(l)	
 
