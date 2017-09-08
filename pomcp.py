@@ -55,7 +55,7 @@ class POMCP_Solver:
 			# if timer() - start_0 > 4*60:
 			# 	return
 
-			if _ > 999:
+			if _ > 999 and _ % 500 == 0:
 				optimal_action = self.history.optimal_action_factored(0)
 				optimal_child = self.history.children[self.actions.index(optimal_action)]
 				self.data.append((_,optimal_child.value))
