@@ -60,7 +60,7 @@ class POMCP_Solver:
 				optimal_action = self.history.optimal_action_factored(0)
 				optimal_child = self.history.children[self.actions.index(optimal_action)]
 				if optimal_child == "empty":
-					self.data.append(_, 0)
+					self.data.append((_, 0))
 				else:
 					self.data.append((_,optimal_child.value))
 			# if _ > 4:
