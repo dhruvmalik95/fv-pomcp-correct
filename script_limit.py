@@ -8,7 +8,7 @@ from pomcp import *
 import math
 
 l = []
-for _ in range(0, 10):
+for _ in range(0, 1):
 	num_theta = 4
 	horizon = 0
 	num_ingredients = 4
