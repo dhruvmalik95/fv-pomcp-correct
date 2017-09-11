@@ -40,6 +40,7 @@ class POMCP_Solver:
 		start_0 = timer()
 		start = start_0
 		for _ in range(0, self.timer):
+			print(_)
 			if _ % 100000 == 0:
 				print(_)
 			sample_state = self.history.sample_belief()
