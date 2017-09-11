@@ -8,7 +8,7 @@ from pomcp import *
 import math
 
 l = []
-for _ in range(0, 1):
+for _ in range(0, 10):
 	num_theta = 4
 	horizon = 0
 	num_ingredients = 4
@@ -33,7 +33,7 @@ for _ in range(0, 1):
 # print("Number Of Ingredients: 5")
 
 #KEEP THESE PARAMETERS FOR NOW!!
-	solver = POMCP_Solver(0.95, epsilon, 30000, initial_history, game, 0.2, 5)
+	solver = POMCP_Solver(0.95, epsilon, 30000, initial_history, game, 0.5, 5)
 	solver.search()
 	data = solver.data
 	l.append(data)
