@@ -59,7 +59,10 @@ class POMCP_Solver:
 			if _ > 999 and _ % 500 == 0:
 				optimal_action = self.history.optimal_action_factored(0)
 				optimal_child = self.history.children[self.actions.index(optimal_action)]
-				self.data.append((_,optimal_child.value))
+				if optimal_child == None:
+					self.data.append(_, 0)
+				else:
+					self.data.append((_,optimal_child.value))
 			# if _ > 4:
 				# print(self.history.children[self.actions.index((0,0,1))].value)
 				# print(self.history.children[self.actions.index((0,0,1))].visited)
